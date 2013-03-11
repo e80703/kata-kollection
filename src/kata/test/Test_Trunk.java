@@ -45,4 +45,5 @@ public class Test_Trunk {
 		assertThat(d, is(1.3));
 		assertThat(d, is(not(1.4)));
 	}
+	
 }

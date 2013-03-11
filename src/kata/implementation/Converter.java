@@ -11,14 +11,14 @@ public class Converter {
 		X(10), XL(40), L(50), XC(90), 
 		C(100), CD(400), D(500), CM(900), M(1000);
 
-		private final int decValue;
+		private final int decimal;
 
 		private Roman(int i) {
-			decValue = i;
+			decimal = i;
 		}
 
-		public int getDecValue() {
-			return decValue;
+		public int getDecimal() {
+			return decimal;
 		}
 	}
 
@@ -26,7 +26,7 @@ public class Converter {
 		Roman largest = null;
 
 		for (Roman rv : Roman.values()) {
-			if (i >= rv.getDecValue()) {
+			if (i >= rv.getDecimal()) {
 				largest = rv;
 			}
 		}
@@ -41,8 +41,7 @@ public class Converter {
 		while (i > 0) {
 			Roman largest = getLargestContaining(i);
 			sb.append(largest.toString());
-
-			i -= largest.getDecValue();
+			i -= largest.getDecimal();
 		}
 
 		return sb.toString();

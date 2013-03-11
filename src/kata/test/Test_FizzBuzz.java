@@ -9,88 +9,84 @@ import org.junit.Test;
 public class Test_FizzBuzz {
 
 	@Test
-	public void ReturnValueIsString() {
+	public void returnValueIsString() {
 		Object o = FizzBuzz.getValue(1);
 		assertTrue(o instanceof String);
 	}
 	
 	@Test
-	public void OneIsOne() {
+	public void oneIsOne() {
 		assertEquals(FizzBuzz.getValue(1),"1");
 	}
 
 	@Test
-	public void TwoIsTwo() {
+	public void twoIsTwo() {
 		assertEquals(FizzBuzz.getValue(2),"2");
 	}
 	
 	@Test
-	public void ThreeIsFizz() {
+	public void threeIsFizz() {
 		assertEquals(FizzBuzz.getValue(3),"Fizz");
 	}
 	
 	@Test
-	public void FourIsFour() {
+	public void fourIsFour() {
 		assertEquals(FizzBuzz.getValue(4),"4");
 	}
 	
 	@Test
-	public void FiveIsBuzz() {
+	public void fiveIsBuzz() {
 		assertEquals(FizzBuzz.getValue(5),"Buzz");
 	}
 	
 	@Test
-	public void SixIsFizz() {
+	public void sixIsFizz() {
 		assertEquals(FizzBuzz.getValue(6),"Fizz");
 	}
 	
 	@Test
-	public void SevenIsSeven() {
+	public void sevenIsSeven() {
 		assertEquals(FizzBuzz.getValue(7),"7");
 	}
 	
 	@Test
-	public void EightIsEight() {
+	public void eightIsEight() {
 		assertEquals(FizzBuzz.getValue(8),"8");
 	}
 	
 	@Test
-	public void NineIsFizz() {
+	public void nineIsFizz() {
 		assertEquals(FizzBuzz.getValue(9),"Fizz");
 	}
 	
 	@Test
-	public void TenIsBuzz() {
+	public void tenIsBuzz() {
 		assertEquals(FizzBuzz.getValue(10),"Buzz");
 	}
 	
 	@Test
-	public void ThirteenIs13() {
+	public void thirteenIs13() {
 		assertEquals(FizzBuzz.getValue(13),"13");
 	}
 	
 	@Test
-	public void FifteenIsFizzBuzz() {
+	public void fifteenIsFizzBuzz() {
 		assertEquals(FizzBuzz.getValue(15),"FizzBuzz");
 	}
 	
 	@Test
-	public void EightTeenIsFizz() {
+	public void eightTeenIsFizz() {
 		assertEquals(FizzBuzz.getValue(18),"Fizz");
 	}
 	
 	@Test
-	public void TwentyIsBuzz() {
+	public void twentyIsBuzz() {
 		assertEquals(FizzBuzz.getValue(20),"Buzz");
 	}
 	
 	@Test
-	public void ThirtyIsFizzBuzz() {
+	public void thirtyIsFizzBuzz() {
 		assertEquals(FizzBuzz.getValue(30),"FizzBuzz");
 	}
-	
-
-	
-	
 	
 }
