@@ -1,26 +1,19 @@
 package kata.implementation;
 
-/*
- *	http://tddkatas.codeplex.com/documentation
+/**
+ *	kata description: process a sequence of integer numbers
+ *		to determine the following statistics:
+ *			minimum value
+ *			maximum value
+ *			number of elements in the sequence
+ *			average value
  *
- * 	process a sequence of integer numbers
- *	to determine the following statistics:
- *
- *	minimum value
- *	maximum value
- *	number of elements in the sequence
- *	average value
+ *	source: http://tddkatas.codeplex.com/documentation
  *
  */
 public class CalcSimple {
 
 	private int[] sequence;
-
-	/*
-	public Calc() {
-		//setSequence(null);
-	}
-	*/
 
 	public int[] getSequence() {
 		return sequence;

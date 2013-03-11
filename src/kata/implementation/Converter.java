@@ -1,6 +1,10 @@
 package kata.implementation;
 
-public class DecToRoman {
+/**
+ *	kata description: convert a decimal number to roman and vica versa
+ * 
+ */
+public class Converter {
 
 	public enum Roman {
 		I(1), IV(4), V(5), IX(9), 
@@ -20,28 +24,28 @@ public class DecToRoman {
 
 	private static Roman getLargestContaining(int i) {
 		Roman largest = null;
-		
+
 		for (Roman rv : Roman.values()) {
 			if (i >= rv.getDecValue()) {
 				largest = rv;
 			}
 		}
-		
+
 		return largest;
 	}
-	
-	public static String convert(int i) {
+
+	public static String toRoman(int i) {
 
 		StringBuffer sb = new StringBuffer();
-		
+
 		while (i > 0) {
-			Roman l = getLargestContaining(i);
-			sb.append(l.toString());
-			
-			i -= l.getDecValue();
+			Roman largest = getLargestContaining(i);
+			sb.append(largest.toString());
+
+			i -= largest.getDecValue();
 		}
-		
+
 		return sb.toString();
-	
 	}
+	
 }

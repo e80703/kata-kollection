@@ -1,17 +1,19 @@
 package kata.implementation;
 
-/*
- * http://en.wikipedia.org/wiki/Fizz_buzz
+/**
+ *	kata description: create a simple fizz buzz game
+ * 		source: http://en.wikipedia.org/wiki/Fizz_buzz
+ * 
  */
 public class FizzBuzz {
 
 	public static String getValue(int number) {
 		StringBuffer sb = new StringBuffer();
-		
+
 		if (number % 3 == 0) {
 			sb.append("Fizz");
 		}
-		
+
 		if (number % 5 == 0) {
 			sb.append("Buzz");
 		}

@@ -1,10 +1,11 @@
 package kata.implementation;
 
-/*
- * return even if number is even
- * return odd if odd, but not prime
- * return # if prime
- * 
+/**
+ *	kata description: decide if a number is odd, even or prime 
+ *		return "even" if number is even
+ *		return "odd" if odd, but not prime
+ *		return the number if prime
+ *
  */
 public class OddEvenPrime {
 

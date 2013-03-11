@@ -1,13 +1,17 @@
 package kata.implementation;
 
-
 /**
- * extra változat:
- * input egy string: számok vesszovel elválasztva
- * adja össze a számokat
- * rekurzió: ha az összeg több számjegyu, akkor ajda össze a számjegyeket 
+ *	kata description: create a calculator with a method int Add(string numbers)
+ *		the method can take 0, 1 or 2 numbers, and will return their sum
+ *		for an empty string it will return 0
+ *		allow the Add method to handle an unknown amount of numbers
+ *		support different delimiters
+ *
+ *	extra: create a function which takes a number as an input
+ *		if the input of the function has more than one digit then summarize the digits
+ *		do this until it is possible
+ *
  */
-
 public class CalcString {
 
 	public static String add() {
@@ -21,7 +25,7 @@ public class CalcString {
 			String[] tokens = input.split(",");
 			return sumStrings(tokens);
 		}
-		
+
 		return 0;
 	}
 
@@ -31,11 +35,11 @@ public class CalcString {
 
 	private static int sumStrings(String[] tokens) {
 		int ret = 0;
-		
+
 		for (String number : tokens) {
 			ret += Integer.parseInt(number);
 		}
-		
+
 		return ret;
 	}
 
