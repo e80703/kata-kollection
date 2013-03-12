@@ -22,6 +22,8 @@ public class Converter {
 		}
 	}
 
+	// convert decimal to roman
+	
 	private static Roman getLargestContaining(int i) {
 		Roman largest = null;
 
@@ -45,6 +47,47 @@ public class Converter {
 		}
 
 		return sb.toString();
+	}
+	
+	// convert roman to decimal
+	
+	private static Roman isRoman(String literal) {
+		for (Roman rv : Roman.values()) {
+			if (literal.equals(rv.toString())) {
+				return rv;
+			}
+		}
+		return null;
+	}
+
+	public static int toDecimal(String roman) {
+		int value = 0;
+
+		if (roman.length() == 1 || roman.length() == 2) {
+			if (isRoman(roman) != null) {
+				// sima "szotari" szam, pl I, IV, X, XL
+				value = isRoman(roman).getDecimal();
+			} else {
+				// osszetett szam, pl II, VI, LX
+				value = toDecimal(roman.substring(0, 1))
+						+ toDecimal(roman.substring(1, 2));
+			}
+		} else if (roman.length() > 2) {
+			// osszetett szam, pl III, XLVII, DCXXIV
+			Roman rv = isRoman(roman.substring(0, 2));
+			if (rv != null) {
+				// duplaval kezdodik
+				value = rv.getDecimal() + toDecimal(roman.substring(2));
+			} else {
+				// simaval kezdodik
+				rv = isRoman(roman.substring(0, 1));
+				if (rv != null) {
+					value = rv.getDecimal() + toDecimal(roman.substring(1));
+				}
+			}
+		}
+
+		return value;
 	}
 	
 }

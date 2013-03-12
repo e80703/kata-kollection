@@ -1,9 +1,7 @@
 package kata.test;
 
 import kata.implementation.OddEvenPrime;
-
 import org.junit.Test;
-
 import static org.junit.Assert.*;
 
 public class Test_OddEvenPrime {

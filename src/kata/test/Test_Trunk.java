@@ -1,14 +1,12 @@
 package kata.test;
 
-import static org.junit.Assert.*;
-import static org.hamcrest.CoreMatchers.*;
-
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
-
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
+import static org.junit.Assert.*;
+import static org.hamcrest.CoreMatchers.*;
 
 public class Test_Trunk {
 
@@ -45,5 +43,5 @@ public class Test_Trunk {
 		assertThat(d, is(1.3));
 		assertThat(d, is(not(1.4)));
 	}
-	
+
 }
